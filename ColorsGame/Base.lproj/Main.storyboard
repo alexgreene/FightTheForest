@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ColorsGame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,49 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpw-7i-j4J">
+                                <rect key="frame" x="249" y="387" width="103" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gpw-7i-j4J" secondAttribute="height" multiplier="103:55" id="KyE-CG-aey"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="browser">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openBrowser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jz9-ZR-qcs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hp-dZ-yjR">
+                                <rect key="frame" x="203" y="268" width="194" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9hp-dZ-yjR" secondAttribute="height" multiplier="97:32" id="47x-8l-sUV"/>
+                                    <constraint firstAttribute="width" constant="194" id="APN-Xq-U0I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="bippety boppity"/>
+                                <connections>
+                                    <action selector="sendColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LQV-dW-cmW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="9hp-dZ-yjR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7JT-eU-tAO"/>
+                            <constraint firstItem="9hp-dZ-yjR" firstAttribute="centerX" secondItem="gpw-7i-j4J" secondAttribute="centerX" id="AiK-1J-jfd"/>
+                            <constraint firstItem="9hp-dZ-yjR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DGv-zR-MW9"/>
+                            <constraint firstItem="gpw-7i-j4J" firstAttribute="top" secondItem="9hp-dZ-yjR" secondAttribute="bottom" constant="55" id="iqc-wU-VNX"/>
+                            <constraint firstItem="9hp-dZ-yjR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="248" id="vXA-MI-YLb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="colorView" destination="8bC-Xf-vdC" id="XZX-Cu-X1K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="202" y="329"/>
         </scene>
     </scenes>
 </document>
